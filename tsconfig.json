@@ -9,7 +9,8 @@
     // "checkJs": true,
     // "allowJs": true,
     "esModuleInterop": true,
-    "types": ["svelte"]
+    "types": ["svelte"],
+    "ignoreDeprecations": "5.0"
   },
   "exclude": ["node_modules", ".svelte-kit"]
 }

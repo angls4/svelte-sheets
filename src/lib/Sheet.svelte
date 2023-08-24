@@ -306,8 +306,8 @@
       // document.addEventListener("touchend", jexcel.touchEndControls);
       // document.addEventListener("touchcancel", jexcel.touchEndControls);
       // document.addEventListener("touchmove", jexcel.touchEndControls);
-      document?.addEventListener("keydown", onKeyDown);
-      document?.addEventListener("keyup", onKeyUp);
+      // document?.addEventListener("keydown", onKeyDown);
+      // document?.addEventListener("keyup", onKeyUp);
     }
   });
 
@@ -414,30 +414,30 @@
   }
 
   hotkeys("ctrl+z, command+z", function (e) {
-    e.preventDefault();
-    cmdz = true;
-    if (historyIndex == 0) return;
-    historyIndex -= 1;
-    const res = JSON.parse(history[historyIndex]);
-    data = res.data;
-    columns = res.columns;
-    rows = res.rows;
-    style = res.style;
-    setTimeout((_) => (cmdz = false), 10);
+    // e.preventDefault();
+    // cmdz = true;
+    // if (historyIndex == 0) return;
+    // historyIndex -= 1;
+    // const res = JSON.parse(history[historyIndex]);
+    // data = res.data;
+    // columns = res.columns;
+    // rows = res.rows;
+    // style = res.style;
+    // setTimeout((_) => (cmdz = false), 10);
   });
 
   hotkeys("ctrl+shift+z, command+shift+z", function (e) {
-    console.log("redo");
-    e.preventDefault();
-    cmdz = true;
-    if (history.length - 1 == historyIndex) return;
-    historyIndex = historyIndex + 1;
-    const res = JSON.parse(history[historyIndex]);
-    data = res.data;
-    columns = res.columns;
-    rows = res.rows;
-    style = res.style;
-    setTimeout((_) => (cmdz = false), 10);
+    // console.log("redo");
+    // e.preventDefault();
+    // cmdz = true;
+    // if (history.length - 1 == historyIndex) return;
+    // historyIndex = historyIndex + 1;
+    // const res = JSON.parse(history[historyIndex]);
+    // data = res.data;
+    // columns = res.columns;
+    // rows = res.rows;
+    // style = res.style;
+    // setTimeout((_) => (cmdz = false), 10);
   });
 
   hotkeys("ctrl+c, command+c, ctrl+x, command+x", function (e) {
@@ -664,12 +664,12 @@
   class="w-full sheet_container"
   class:fullscreen={!!config.fullscreen}
   class:with-toolbar={config.tableOverflow != true && config.toolbar}
+  tabindex="1"
+  >
+  <!-- on:mouseover={onMouseOver}
   on:contextmenu={(e) => showMenu(e)}
   on:mousedown={onMouseDown}
-  on:mouseup={onMouseUp}
-  on:mouseover={onMouseOver}
-  tabindex="1"
->
+  on:mouseup={onMouseUp} -->
   <div
     class="jexcel_content"
     style={config.tableWidth

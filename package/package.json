@@ -39,10 +39,6 @@
   "type": "module",
   "exports": {
     "./package.json": "./package.json",
-    "./Menu.svelte": "./Menu.svelte",
-    "./Open.svelte": "./Open.svelte",
-    "./Sheet.svelte": "./Sheet.svelte",
-    "./Toolbar.svelte": "./Toolbar.svelte",
     "./actions/copypaste": "./actions/copypaste.js",
     "./actions/draggable": "./actions/draggable.js",
     "./actions": "./actions/index.js",
@@ -52,6 +48,10 @@
     "./convert": "./convert.js",
     "./defaultconfig": "./defaultconfig.js",
     ".": "./index.js",
+    "./Menu.svelte": "./Menu.svelte",
+    "./Open.svelte": "./Open.svelte",
+    "./Sheet.svelte": "./Sheet.svelte",
+    "./Toolbar.svelte": "./Toolbar.svelte",
     "./utilities": "./utilities.js"
   },
   "svelte": "./index.js"
